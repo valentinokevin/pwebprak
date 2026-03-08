@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=B612:wght@400;700&family=Italiana&display=swap" rel="stylesheet">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    
+    <link rel="stylesheet" href="style.css">
+    
+    <title>Pembayaran Berhasil - Ambatysm</title>
+</head>
+
+<body>
+
+    <!-- Page Header -->
+    <div class="shop-header">
+        <a href="index.html" class="shop-header__btn">
+            <i class="bi bi-x-lg"></i>
+        </a>
+        <h1 class="shop-header__title">PEMBAYARAN</h1>
+        <div style="width: 40px;"></div>
+    </div>
+
+    <!-- Success Content -->
+    <div class="success-container">
+        
+        <!-- Animated Checkmark -->
+        <div class="success-checkmark">
+            <div class="success-checkmark__circle">
+                <svg class="success-checkmark__svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 52 52">
+                    <circle class="success-checkmark__circle-bg" cx="26" cy="26" r="25" fill="none"/>
+                    <path class="success-checkmark__check" fill="none" d="M14.1 27.2l7.1 7.2 16.7-16.8"/>
+                </svg>
+            </div>
+        </div>
+
+        <!-- Success Text -->
+        <h2 class="success-title">SUCCESSFULL</h2>
+        <p class="success-subtitle">Pembayaran anda telah terverifikasi</p>
+
+        <!-- Order Summary Mini -->
+        <div class="success-summary">
+            <div class="success-summary__row">
+                <span>No. Pesanan</span>
+                <span id="orderNumber">AMB-20260307-001</span>
+            </div>
+            <div class="success-summary__row">
+                <span>Total Dibayar</span>
+                <span id="successTotal" class="success-summary__total">Rp 1.840.000</span>
+            </div>
+            <div class="success-summary__row">
+                <span>Metode</span>
+                <span id="successMethod">QRIS</span>
+            </div>
+        </div>
+
+        <!-- Action Buttons -->
+        <a href="index.html" class="success-btn success-btn--primary">Kembali ke Beranda</a>
+    </div>
+
+    <!-- Confetti Canvas -->
+    <canvas id="confettiCanvas" class="success-confetti"></canvas>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            initPaymentSuccessPage();
+        });
+    </script>
+</body>
+</html>
